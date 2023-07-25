@@ -1,0 +1,208 @@
+FloatLayout:
+    
+
+    Image:
+        id:legs1
+        source:'rightleg.png'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+        pos_hint:{'x':0.54, 'y': 0.5 }
+        opacity: 0
+
+    Image:
+        id:hanger
+        source:"hanger.png"
+        size_hint_y: 0.4
+        size_hint_x: 0.4
+        
+        allow_stretch: True
+        pos_hint:{'x':0.3, 'y': 0.45 }
+        
+    Image:
+        id:word_lines
+        source: "line.png"
+        pos_hint:{'x':0.07, 'y': 0.3 }
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+    Label:
+        id:letter1
+        text: ""
+        pos_hint:{'x':-0.38, 'y': -0.1 }
+        color: 1,0,1,1
+        font_size: '24pt'
+    Image:
+        id:word_lines
+        source: "line.png"
+        pos_hint:{'x':0.2, 'y': 0.3 }
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+    Label:
+        id:letter2
+        text: ""
+        pos_hint:{'x':-0.25, 'y': -0.1 }
+        color: 1,0,1,1
+        font_size: '24pt'
+    Image:
+        id:word_lines
+        source: "line.png"
+        pos_hint:{'x':0.33, 'y': 0.3 }
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+    Label:
+        id:letter3
+        text: ""
+        pos_hint:{'x':-0.12, 'y': -0.1 }
+        color: 1,0,1,1
+        font_size: '24pt'
+    Image:
+        id:word_lines
+        source: "line.png"
+        pos_hint:{'x':0.46, 'y': 0.3 }
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+    Label:
+        id:letter4
+        text: ""
+        pos_hint:{'x':0.01, 'y': -0.1 }
+        color: 1,0,1,1
+        font_size: '24pt'
+    Image:
+        id:word_lines
+        source: "line.png"
+        pos_hint:{'x':0.59, 'y': 0.3 }
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+    Label:
+        id:letter5
+        text: ""
+        pos_hint:{'x':0.14, 'y': -0.1 }
+        color: 1,0,1,1
+        font_size: '24pt'
+    Image:
+        id:word_lines
+        source: "line.png"
+        pos_hint:{'x':0.72, 'y': 0.3 }
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+    Label:
+        id:letter6
+        text: ""
+        pos_hint:{'x':0.27, 'y': -0.1 }
+        color: 1,0,1,1
+        font_size: '24pt'
+        
+
+    Button:
+        id:start
+        text:"New Game"
+        pos_hint:{'x':0.35, 'y':0.5}
+        size_hint: 0.3,0.1
+        on_press: app.startgame()
+        opacity: 1
+        
+
+    
+    Label:
+        id: test
+        text: "Welcome to my HangMan Game."
+        font_size: '24pt'
+        pos_hint:{'x':0.0, 'y':0.4}
+        color: 1,0,1,1
+    TextInput:
+        id: guesser
+        pos_hint:{'x':0.35, 'y':0.1}
+        size_hint: 0.3,0.06
+        opacity: 0.2
+        readonly: True
+        multiline:False
+        border: (1,1,1,1)
+        font_size: '24pt'
+        
+    Button:
+        id:guess
+        text:"Guess a Letter"
+        pos_hint:{'x':0.35, 'y':0.2}
+        size_hint: 0.3,0.1
+        on_press: app.guess()
+        disabled: True
+    
+    Image:
+        id:head
+        source:'head2.png'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+        pos_hint:{'x':0.51, 'y': 0.69 }
+        opacity: 0
+    Image:
+        id:body
+        source:'body.png'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+        pos_hint:{'x':0.51, 'y': 0.59 }
+        opacity: 0
+    Image:
+        id:legs2
+        source:'leftleg.png'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+        pos_hint:{'x':0.48, 'y': 0.50 }
+        opacity: 0
+    
+    
+    Image:
+        id:arms1
+        source:'line.png'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+        pos_hint:{'x':0.485, 'y': 0.62 }
+        opacity: 0
+    Image:
+        id:arms2
+        source:'line.png'
+        size_hint_x: 0.1
+        size_hint_y: 0.1
+        allow_stretch: True
+        pos_hint:{'x':0.535, 'y': 0.62 }
+        opacity: 0
+
+    Button:
+        id:save
+        text: "Save State"
+        pos_hint:{'x':0.0, 'y':0.2}
+        size_hint: 0.3,0.1
+        on_press: app.save()
+        disabled: True
+    Button:
+        id:load
+        text: "Load State"
+        pos_hint:{'x':0.7, 'y':0.2}
+        size_hint: 0.3,0.1
+        on_press: app.load()
+        
+    Label:
+        id: content
+        font_size: '24pt'
+        pos_hint:{'x':0, 'y':0.01}
+        text:""
+        color: 1,0,1,1
+        
+
+
+  
+        
+        
+    
+    
+    
+
